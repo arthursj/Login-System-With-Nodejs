@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Login</title>
+</head>
+<body>
+  
+  <div class="page">
+    <div class="form">
+    <h1>Login</h1>
+  <form action="/login" method="POST">
+    <div>
+      <label class="form1" for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Escreva seu email" required>
+    </div>
+    <div>
+      <label class="form1" for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Escreva sua senha" required>
+    </div>
+    <button class="custom-btn btn-9" type="submit">Login</button>
+    <a href="/register">Register</a>
+  </form>
+  </div>
+  <% if (messages.error) { %>
+    <div class="erro">
+      <div class="erro2">
+    <%= messages.error %>
+      </div>
+    </div>
+  <% } %>
+  
+</body>
+</html>
